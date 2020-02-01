@@ -43,37 +43,9 @@
       }
     </style>
 
-    <!-- <script src="node_modules/socket.io/lib/index.js"></script>
-    <script src="node_modules/axios/index.js"></script>
-    <script src="index.js"></script> -->
-
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-      $(function() {
-        var socket = io();
-        $('form').submit(function(e) {
-          e.preventDefault(); // prevents page reloading
-          $.ajax({
-            type: 'POST',
-            url: '/message',
-            data: JSON.stringify({
-              message: 'Hai this is my message',
-              number: 12345
-            }),
-            success: function(res) {
-              console.log('response is ', res);
-            },
-            error: function(err) {
-              console.log('error is :', err);
-            },
-            dataType: JSON
-          });
-
-          // return false;
-        });
-      });
-    </script>
+    <script src="/index.js"></script>
   </head>
 
   <body>
